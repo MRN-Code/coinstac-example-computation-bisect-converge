@@ -40,6 +40,8 @@ see #install and #run
 
 # run
 
-`coinstac-simulator -d ./test/declaration.js`, or!, `npm test`
+- navigate into the project directory
+- install dependencies, `npm install`
+- `npm test`
 
 <img src="https://raw.githubusercontent.com/MRN-Code/coinstac-simulator/master/media/demo-capture.gif" />
