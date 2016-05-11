@@ -10,11 +10,11 @@
 
 # what
 
-this is an example coinstac decentralized computation.
+this is an example coinstac decentralized computation.  this package also bundles the coinstac-simulator, allowing users to run, fiddle, & play with the system for learning purposes.
 
-this example does not perform a meaningful analysis.  instead, it exercises the coinstac system behavior and network utilities.
+this example does not perform a meaningful analysis.  instead, it emulates the coinstac system behavior and network utilities whilst running a simple algorithm.
 
-this particular example algorithm performs the following:
+this particular algorithm performs the following:
 
 - a series of users guess a random integers between 0 and 100
 - after the first user makes his/her guess, the coinstac central computation server selects a random number from the same range
