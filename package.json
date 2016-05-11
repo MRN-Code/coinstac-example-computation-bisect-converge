@@ -1,6 +1,6 @@
 {
   "name": "coinstac-example-computation-bisect-converge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "example coinstac decentralized computation.",
   "main": "src/index.js",
   "scripts": {
