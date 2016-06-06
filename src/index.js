@@ -6,6 +6,7 @@ module.exports = {
   name: 'bisect-converge',
   version: '0.0.1',
   cwd: __dirname,
+  plugins: ['group-step'],
   local: [
     // guess first integer
     {
