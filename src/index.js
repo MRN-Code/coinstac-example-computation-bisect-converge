@@ -16,17 +16,17 @@ module.exports = {
     // attempt to converge to server target, using "hints" from the remote
     {
       type: 'function',
-      fn: function (opts, cb) { // eslint-disable-line
+      fn: function (opts) { // eslint-disable-line
         if (
           !opts.remoteResult.data || // no data from server yet (kickoff)
           opts.remoteResult.data.target === undefined
-        ) { return cb(); }
+        ) { return null; }
         const lastGuess = opts.previousData;
         let currGuess = opts.previousData;
         const target = opts.remoteResult.data.target;
         currGuess = ((target - currGuess) / 2) + currGuess;
         console.log('old', lastGuess, 'new', currGuess); // eslint-disable-line
-        cb(null, currGuess);
+        return currGuess;
       },
     },
   ],
@@ -38,7 +38,7 @@ module.exports = {
       args: ['./generate-random-int.py'],
     }, {
       type: 'function',
-      fn: function (opts, cb) { // eslint-disable-line
+      fn: function (opts) { // eslint-disable-line
         let target = parseInt(opts.previousData, 10);
         let result = {};
         let convergeCount = 0;
@@ -66,7 +66,7 @@ module.exports = {
         if (allConverged) { result.complete = true; }
 
         console.log(target, 'convergeCount', convergeCount); // eslint-disable-line
-        cb(null, result);
+        return result;
       },
     },
   ],
