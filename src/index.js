@@ -43,10 +43,13 @@ module.exports = {
     }, {
       type: 'function',
       fn: function (opts) { // eslint-disable-line
-        let target = parseInt(opts.previousData, 10);
+        let target;
+        if (typeof opts.previousData === 'number') {
+          target = parseInt(opts.previousData, 10);
+        }
         let result = {};
         let convergeCount = 0;
-        if (target > 0) {
+        if (target >= 0) {
           // on first run, target is a random number from the python
           // computation above
           result.target = target;
