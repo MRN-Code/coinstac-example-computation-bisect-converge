@@ -1,2 +1,7 @@
+import sys
+
 from random import randint
-print randint(1, 100)
+myint = randint(1, 100)
+print myint
+
+sys.stderr.write('My random # was ' + str(myint))
