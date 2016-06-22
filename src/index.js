@@ -3,9 +3,11 @@
 
 'use strict';
 
+const pkg = require('../package.json');
+
 module.exports = {
   name: 'bisect-converge',
-  version: '0.0.1',
+  version: pkg.version,
   cwd: __dirname,
   plugins: ['group-step'],
   local: [
