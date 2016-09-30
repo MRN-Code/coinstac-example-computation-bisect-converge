@@ -68,16 +68,16 @@ module.exports = {
           const delta = Math.abs(userGuess / target);
           // console.log(`${usrRslt.username} in: ${userGuess} target: ${target} delta: ${delta}`)
           if (delta > 0.95 && delta < 1.05) {
-            ++convergeCount;
+            convergeCount += 1;
           }
         });
         const allConverged = convergeCount === opts.usernames.length;
 
         if (allConverged) {
           result.complete = true;
-          console.log(
+          console.log( // eslint-disable-line no-console
             `all users converged on ${target}`,
-            opts.userResults.map((uR) => ({ final: uR.data, username: uR.username }))
+            opts.userResults.map(uR => ({ final: uR.data, username: uR.username }))
           );
         }
         return result;
