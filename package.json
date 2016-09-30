@@ -28,7 +28,7 @@
     "converge"
   ],
   "author": "cdaringe",
-  "license": "MPL-2.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MRN-Code/coinstac-example-computation-bisect-converge/issues"
   },
