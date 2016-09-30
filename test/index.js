@@ -1,9 +1,11 @@
 'use strict';
 
+const coinstacSimulator = require('coinstac-simulator');
 const path = require('path');
-const sim = require('coinstac-simulator');
-const noop = require('lodash/noop');
 
-const declaration = path.resolve(__dirname, './declaration');
-sim.run(declaration)
-.then(() => sim.teardown(noop));
+/* eslint-disable no-console */
+coinstacSimulator.run(path.join(__dirname, 'declaration.js'))
+  .then(() => console.log('done'))
+  .catch(error => console.error(error));
+/* eslint-enable no-console */
+
